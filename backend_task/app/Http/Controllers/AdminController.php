@@ -22,7 +22,7 @@ class AdminController extends Controller
             // 'password' => bcrypt("123456")
             'password' => bcrypt($req->tempPassword)
         ]);
-    Mail::to($user->email)->send(new UserCreatedMail($user, $req->tempPassword));
+   // Mail::to($user->email)->send(new UserCreatedMail($user, $req->tempPassword));
         return response()->json($user);
 
     //   try {
